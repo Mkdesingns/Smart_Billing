@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Billing</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        #sidebar {
+            width: 15%;
+            height: 100%;
+            background-color: #f0f0f0;
+            position: fixed;
+            overflow-x: hidden;
+            padding-top: 20px;
+        }
+
+        #main {
+            margin-left: 15%;
+            padding: 20px;
+        }
+
+        #header {
+            height: 10%;
+            background-color: #d3d3d3;
+            padding: 10px;
+        }
+
+        #column1 {
+            width: 100%;
+            height: 15%;
+            background-color: #e6e6e6;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        #search-bar {
+            margin-right: 20px;
+        }
+
+        #add-bill-btn {
+            cursor: pointer;
+        }
+
+        #print-btn {
+            cursor: pointer;
+        }
+
+        #column2 {
+            width: 25%;
+            float: left;
+            padding: 20px;
+        }
+
+        #column3 {
+            width: 60%;
+            float: left;
+            padding: 20px;
+        }
+
+        #total-amount {
+            position: fixed;
+            bottom: 10px;
+            right: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="sidebar">
+        <div id="menu-icon">&#9776; Menu</div>
+        <div id="menu-list" style="display: none;">
+            <ul>
+                <li>Bill</li>
+                <li>Edit Bill</li>
+                <li>Goods Received</li>
+                <li>Stock Available</li>
+                <li>Khata Entries</li>
+                <li>Advances Paid</li>
+                <li>Balance</li>
+                <li>Cash Payments</li>
+                <li>Settings</li>
+                <li>Login/Logout</li>
+            </ul>
+        </div>
+        <div id="search-bar">
+            <input type="text" placeholder="Search by Name/Barcode/No">
+            <button id="search-btn">Search</button>
+        </div>
+        <div id="add-bill-btn">+</div>
+        <div id="print-btn">Print</div>
+    </div>
+
+    <div id="main">
+        <div id="header">Smart Billing</div>
+        
+        <div id="column1">
+            <!-- Content of column 1 -->
+        </div>
+
+        <div id="column2">
+            <!-- Content of column 2 -->
+        </div>
+
+        <div id="column3">
+            <!-- Content of column 3 -->
+            <div id="selected-items">
+                <!-- Display selected items here -->
+            </div>
+            <div id="total-amount">Total Amount: $0.00</div>
+        </div>
+    </div>
+
+    <script>
+        // Add JavaScript functionality here
+        document.getElementById('menu-icon').addEventListener('click', function () {
+            var menuList = document.getElementById('menu-list');
+            menuList.style.display = (menuList.style.display === 'none' || menuList.style.display === '') ? 'block' : 'none';
+        });
+
+        // Add more JavaScript functionality as needed
+    </script>
+
+</body>
+</html>
